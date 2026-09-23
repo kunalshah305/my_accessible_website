@@ -5,15 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INVESTOR COMPLAINTS | Finsights by Kunal</title>
     <style>
-        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; margin: 0; color: #333; }
+        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; margin: 0; color: #111111; }
         nav { background-color: #003366; padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; }
-        .logo-link { color: white; text-decoration: none; font-weight: bold; font-size: 1.2rem; }
+        .logo-link { color: white; text-decoration: underline; font-weight: bold; font-size: 1.2rem; }
         main { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-        h1 { color: #003366; border-bottom: 2px solid #003366; padding-bottom: 10px; }
-        footer { background-color: #f4f4f4; padding: 20px; text-align: center; font-size: 0.8rem; margin-top: 50px; }
+        
+        /* Heading styling with scroll offset to stay below sticky nav */
+        h1 { 
+            color: #003366; 
+            border-bottom: 2px solid #003366; 
+            padding-bottom: 10px; 
+            scroll-margin-top: 130px !important;
+        }
+        h1:focus { 
+            outline: none !important;
+        }
+
+        footer { background-color: #e9ecef; padding: 20px; text-align: center; font-size: 0.85rem; margin-top: 50px; }
+        
+        /* Skip link styling for keyboard navigation (WCAG 2.4.1) */
+        .skip-link {
+            position: absolute;
+            top: -100px;
+            left: 10px;
+            background: #003366;
+            color: #ffffff;
+            padding: 12px 20px;
+            z-index: 99999;
+            text-decoration: underline;
+            font-weight: bold;
+            border-radius: 4px;
+            border: 2px solid #ffffff;
+        }
+        .skip-link:focus {
+            top: 10px;
+        }
+
+        /* Focus state accessibility */
+        a:focus, summary:focus {
+            outline: 3px solid #0056b3 !important;
+            outline-offset: 2px;
+        }
     </style>
 </head>
 <body>
+
+    <!-- First interactive element on the page -->
+    <a href="#main-heading" class="skip-link">Skip to main content</a>
 
     <nav aria-label="Main Navigation" style="background-color: #003366; padding: 5px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; min-height: 80px;">
     
@@ -26,9 +64,8 @@
 
     <div style="display: flex; align-items: center; gap: 15px;">
     
-    
     <details style="position: relative;">
-        <summary style="color: white; cursor: pointer; font-weight: bold; padding: 8px 15px; list-style: none; border: 1px solid rgba(255,255,255,0.3); border-radius: 4px; font-size: 0.9rem;">
+        <summary style="color: white; cursor: pointer; font-weight: bold; padding: 8px 15px; list-style: none; border: 2px solid #ffffff; border-radius: 4px; font-size: 0.9rem;">
             LINKS &#9662;
         </summary>
         
@@ -39,34 +76,35 @@
                    position: absolute; 
                    right: 0; 
                    width: 220px; 
-                   box-shadow: 0px 8px 16px rgba(0,0,0,0.2); 
+                   box-shadow: 0px 8px 16px rgba(0,0,0,0.3); 
+                   border: 1px solid #003366;
                    border-radius: 4px; 
                    z-index: 1001;
                    display: flex;
                    flex-direction: column; 
                    gap: 12px;">
-            <li><a href="privacy.html" style="color: #003366; text-decoration: none; font-size: 0.95rem; font-weight: 500;">Privacy Policy</a></li>
-            <li><a href="grievance.html" style="color: #003366; text-decoration: none; font-size: 0.95rem; font-weight: 500;">Grievance Redressal</a></li>
-            <li><a href="complaints.html" style="color: #003366; text-decoration: none; font-size: 0.95rem; font-weight: 500;">Investor Complaints</a></li>
-            <li><a href="terms.html" style="color: #003366; text-decoration: none; font-size: 0.95rem; font-weight: 500;">Terms of Use</a></li>
-            <li><a href="refund.html" style="color: #003366; text-decoration: none; font-size: 0.95rem; font-weight: 500;">Refund Policy</a></li>
-            <li><a href="charter.html" style="color: #003366; text-decoration: none; font-size: 0.95rem; font-weight: 500;">Investor Charter</a></li>
-            <li><a href="disclaimer.html" style="color: #003366; text-decoration: none; font-size: 0.95rem; font-weight: 500;">Disclosures/Disclaimer</a></li>
-            <li><a href="accessibility.html" style="color: #003366; text-decoration: none; font-size: 0.95rem; font-weight: 500;">Accessibility Issues</a></li>
+            <!-- VISUAL FIX: All dropdown links underlined explicitly (WCAG 1.4.1) -->
+            <li><a href="privacy.html" style="color: #003366; text-decoration: underline; font-size: 0.95rem; font-weight: 600;">Privacy Policy</a></li>
+            <li><a href="grievance.html" style="color: #003366; text-decoration: underline; font-size: 0.95rem; font-weight: 600;">Grievance Redressal</a></li>
+            <li><a href="complaints.html" style="color: #003366; text-decoration: underline; font-size: 0.95rem; font-weight: 600;">Investor Complaints</a></li>
+            <li><a href="terms.html" style="color: #003366; text-decoration: underline; font-size: 0.95rem; font-weight: 600;">Terms of Use</a></li>
+            <li><a href="refund.html" style="color: #003366; text-decoration: underline; font-size: 0.95rem; font-weight: 600;">Refund Policy</a></li>
+            <li><a href="charter.html" style="color: #003366; text-decoration: underline; font-size: 0.95rem; font-weight: 600;">Investor Charter</a></li>
+            <li><a href="disclaimer.html" style="color: #003366; text-decoration: underline; font-size: 0.95rem; font-weight: 600;">Disclosures/Disclaimer</a></li>
+            <li><a href="accessibility.html" style="color: #003366; text-decoration: underline; font-size: 0.95rem; font-weight: 600;">Accessibility Issues</a></li>
         </ul>
     </details>
 </div>
 </nav>
 
-
     <main>
-    <h1>INVESTOR COMPLAINTS</h1>
+    <h1 id="main-heading" tabindex="-1" style="color: #003366; line-height: 1.2; scroll-margin-top: 130px;">INVESTOR COMPLAINTS</h1>
 
     <h2>Data for the Month Ending - March 2026</h2>
     <p>Details of complaints received and redressed during the month:</p>
     <div style="overflow-x: auto;">
-        <table border="1" style="width: 100%; border-collapse: collapse; margin-bottom: 30px; min-width: 600px;">
-            <thead style="background-color: #003366; color: white;">
+        <table border="1" style="width: 100%; border-collapse: collapse; margin-bottom: 30px; min-width: 600px; border: 1px solid #777;">
+            <thead style="background-color: #003366; color: #ffffff;">
                 <tr>
                     <th style="padding: 10px;">SN</th>
                     <th style="padding: 10px;">Received from</th>
@@ -82,15 +120,16 @@
                 <tr><td style="text-align:center;">1</td><td>Directly from Investors</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td></tr>
                 <tr><td style="text-align:center;">2</td><td>SEBI (SCORES)</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td></tr>
                 <tr><td style="text-align:center;">3</td><td>Other Sources (if any)</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td></tr>
-                <tr style="font-weight:bold; background-color: #f4f4f4;"><td style="text-align:center;"></td><td>Grand Total</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td></tr>
+                <!-- VISUAL FIX: High contrast row background and dark text (WCAG 1.4.3) -->
+                <tr style="font-weight:bold; background-color: #e9ecef; color: #111111;"><td style="text-align:center;"></td><td>Grand Total</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td></tr>
             </tbody>
         </table>
     </div>
 
     <h2>Trend of Monthly Disposal of Complaints</h2>
     <div style="overflow-x: auto;">
-        <table border="1" style="width: 100%; border-collapse: collapse; margin-bottom: 30px; min-width: 600px;">
-            <thead style="background-color: #003366; color: white;">
+        <table border="1" style="width: 100%; border-collapse: collapse; margin-bottom: 30px; min-width: 600px; border: 1px solid #777;">
+            <thead style="background-color: #003366; color: #ffffff;">
                 <tr>
                     <th style="padding: 10px;">SN</th>
                     <th style="padding: 10px;">Month</th>
@@ -101,27 +140,27 @@
                 </tr>
             </thead>
             <tbody>
-                <tr><td style="text-align:center;">1</td><td>April 2025</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td></tr>
-                <tr><td style="text-align:center;">2</td><td>May 2025</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td></tr>
-                <tr><td style="text-align:center;">3</td><td>June 2025</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td></tr>
-                <tr><td style="text-align:center;">4</td><td>July 2025</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td></tr>
-                <tr><td style="text-align:center;">5</td><td>August 2025</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td></tr>
-                <tr><td style="text-align:center;">6</td><td>September 2025</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td></tr>
-                <tr><td style="text-align:center;">7</td><td>October 2025</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td></tr>
-                <tr><td style="text-align:center;">8</td><td>November 2025</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td></tr>
-                <tr><td style="text-align:center;">9</td><td>December 2025</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td></tr>
-                <tr><td style="text-align:center;">10</td><td>January 2026</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td></tr>
-                <tr><td style="text-align:center;">11</td><td>February 2026</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td></tr>
-                <tr><td style="text-align:center;">12</td><td>March 2026</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td></tr>
-                <tr style="font-weight:bold; background-color: #f4f4f4;"><td style="text-align:center;"></td><td>Grand Total</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td></tr>
+                <tr><td style="text-align:center;">1</td><td>September 2025</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td></tr>
+                <tr><td style="text-align:center;">2</td><td>October 2025</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td></tr>
+                <tr><td style="text-align:center;">3</td><td>November 2025</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td></tr>
+                <tr><td style="text-align:center;">4</td><td>December 2025</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td></tr>
+                <tr><td style="text-align:center;">5</td><td>January 2026</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td></tr>
+                <tr><td style="text-align:center;">6</td><td>February 2026</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td></tr>
+                <tr><td style="text-align:center;">7</td><td>March 2026</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td></tr>
+                <tr><td style="text-align:center;">8</td><td>April 2026</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td></tr>
+                <tr><td style="text-align:center;">9</td><td>May 2026</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td></tr>
+                <tr><td style="text-align:center;">10</td><td>June 2026</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td></tr>
+                <tr><td style="text-align:center;">11</td><td>July 2026</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td></tr>
+                <tr><td style="text-align:center;">12</td><td>August 2026</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td></tr>
+                <tr style="font-weight:bold; background-color: #e9ecef; color: #111111;"><td style="text-align:center;"></td><td>Grand Total</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td></tr>
             </tbody>
         </table>
     </div>
 
     <h2>Trend of Annual Disposal of Complaints</h2>
     <div style="overflow-x: auto;">
-        <table border="1" style="width: 100%; border-collapse: collapse; margin-bottom: 30px; min-width: 600px;">
-            <thead style="background-color: #003366; color: white;">
+        <table border="1" style="width: 100%; border-collapse: collapse; margin-bottom: 30px; min-width: 600px; border: 1px solid #777;">
+            <thead style="background-color: #003366; color: #ffffff;">
                 <tr>
                     <th style="padding: 10px;">SN</th>
                     <th style="padding: 10px;">Year</th>
@@ -132,37 +171,46 @@
                 </tr>
             </thead>
             <tbody>
-                <tr><td style="text-align:center;">1</td><td>2023-24</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td></tr>
-                <tr><td style="text-align:center;">2</td><td>2024-25</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td></tr>
-                <tr><td style="text-align:center;">3</td><td>2025-26</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td></tr>
-                <tr style="font-weight:bold; background-color: #f4f4f4;"><td style="text-align:center;"></td><td>Grand Total</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td></tr>
+                <tr><td style="text-align:center;">1</td><td>2024-25</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td></tr>
+                <tr><td style="text-align:center;">2</td><td>2025-26</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td></tr>
+                <tr><td style="text-align:center;">3</td><td>2026-27</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td></tr>
+                <tr style="font-weight:bold; background-color: #e9ecef; color: #111111;"><td style="text-align:center;"></td><td>Grand Total</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td><td style="text-align:center;">0</td></tr>
             </tbody>
         </table>
     </div>
 </main>
 
-
-    <footer style="background-color: #f4f4f4; padding: 40px 20px; text-align: center; margin-top: 50px; border-top: 1px solid #ddd;">
+    <!-- VISUAL FIX: High contrast footer background & text (WCAG 1.4.3 & 1.4.1) -->
+    <footer style="background-color: #e9ecef; padding: 40px 20px; text-align: center; margin-top: 50px; border-top: 2px solid #cccccc;">
         
         <p style="margin-bottom: 20px;">
-            <a href="index.html" style="color: #003366; font-weight: bold; text-decoration: none;">&larr; Back to HOME</a>
+            <a href="index.html" style="color: #003366; font-weight: bold; text-decoration: underline; font-size: 1.05rem;">&larr; Back to HOME</a>
         </p>
 
-        <p style="font-size: 0.9rem; color: #444; max-width: 800px; margin: 0 auto 15px auto; line-height: 1.6;">
+        <p style="font-size: 0.9rem; color: #111111; max-width: 800px; margin: 0 auto 15px auto; line-height: 1.6;">
             Investment in securities market are subject to market risks. Read all the related documents carefully before investing. 
             Registration granted by SEBI and certification from NISM in no way guarantee performance of the intermediary or 
             provide any assurance of returns to investors.
         </p>
 
-        <p style="font-size: 0.9rem; color: #444; margin-bottom: 20px;">
+        <p style="font-size: 0.9rem; color: #111111; margin-bottom: 20px;">
             ODR Portal can be accessed via the following link - 
-            <a href="https://smartodr.in/" target="_blank" rel="noopener" style="color: #003366; text-decoration: underline;">https://smartodr.in/</a>
+            <a href="https://smartodr.in/" target="_blank" rel="noopener" style="color: #003366; text-decoration: underline; font-weight: bold;">https://smartodr.in/</a>
         </p>
 
-        <p style="font-size: 0.85rem; color: #777; margin-top: 20px; border-top: 1px solid #eee; padding-top: 20px;">
+        <p style="font-size: 0.85rem; color: #333333; margin-top: 20px; border-top: 1px solid #ccc; padding-top: 20px; font-weight: 600;">
             Copyright © 2023 finsightsbykunal - All Rights Reserved.
         </p>
     </footer>
 
+    <!-- Clean Reload Script -->
+    <script>
+      if (window.location.hash) {
+        window.history.replaceState(null, null, window.location.pathname);
+      }
+      window.addEventListener('beforeunload', function() {
+        window.scrollTo(0, 0);
+      });
+    </script>
 </body>
 </html>
